@@ -1,0 +1,4 @@
+#!/bin/sh
+
+tags=$1
+geeknote find -tg $tags -nb cli

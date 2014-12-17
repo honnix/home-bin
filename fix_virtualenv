@@ -1,0 +1,17 @@
+#!/bin/sh
+
+V=$1
+D=$PWD
+
+cd $V
+rm .Python > /dev/null 2>&1
+cd bin
+rm -f python* > /dev/null 2>&1
+cd ..
+cd lib/python*
+rm -f * > /dev/null 2>&1
+cd ../..
+cd include
+rm -f python* > /dev/null 2>&1
+cd $D
+virtualenv $V
