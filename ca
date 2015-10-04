@@ -2,4 +2,4 @@
 
 content=$1
 tags=$2
-geeknote create -tg $tags -nb cli -t "$content"
+geeknote create -tg "$tags" -nb cli -t "$content"

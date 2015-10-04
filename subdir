@@ -1,0 +1,10 @@
+#!/bin/sh
+
+CMD="$@"
+for dir in `ls -d */`
+do
+    cd $dir
+    echo "== $dir"
+    eval $CMD
+    cd ..
+done
