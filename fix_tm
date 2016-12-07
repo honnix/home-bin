@@ -1,0 +1,8 @@
+#!/bin/sh
+
+VOLUME="$1"
+BUNDLE="`scutil --get ComputerName`.sparsebundle"
+chflags -R nouchg /Volumes/"$VOLUME"/"$BUNDLE"
+hdiutil attach -nomount -noverify -noautofsck /Volumes/"$VOLUME"/"$BUNDLE"
+# fsck_hfs -drfy -c 750 /dev/disk2s2
+# hdiutil detach /dev/disk2s2
